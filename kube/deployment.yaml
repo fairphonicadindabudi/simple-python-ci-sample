@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: simple-addition-api
-          image: fpadindabudi/simple-addition-api:main
+          image: fpadindabudi/simple-addition-api:develop
           ports:
             - containerPort: 80
           imagePullPolicy: Always
