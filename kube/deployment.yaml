@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-addition-api
+  labels:
+    app: simple-addition-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: simple-addition-api
+  template:
+    metadata:
+      labels:
+        app: simple-addition-api
+    spec:
+      containers:
+        - name: simple-addition-api
+          image: fpadindabudi/simple-addition-api:main
+          ports:
+            - containerPort: 80
+          imagePullPolicy: Always
+          resources:
+            requests:
+              cpu: "250m"
