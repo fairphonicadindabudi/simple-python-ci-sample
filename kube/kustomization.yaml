@@ -1,0 +1,5 @@
+commonLabels:
+  app: simple-addition-api
+resources:
+- deployment.yaml
+- service.yaml
